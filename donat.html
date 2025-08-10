@@ -40,13 +40,6 @@
             width: 150px;
             opacity: 0.2;
             animation: float 6s ease-in-out infinite;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .donut-bg:hover {
-            transform: scale(1.1) rotate(15deg);
-            opacity: 0.5;
         }
         
         .donut-bg:nth-child(1) {
@@ -78,12 +71,6 @@
             margin-bottom: 0.5rem;
             position: relative;
             z-index: 1;
-            transition: all 0.3s ease;
-        }
-        
-        h1:hover {
-            transform: scale(1.05);
-            text-shadow: 4px 4px 8px rgba(0,0,0,0.4);
         }
         
         .tagline {
@@ -92,6 +79,16 @@
             font-weight: 300;
             position: relative;
             z-index: 1;
+        }
+        
+        .delivery-info {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 0.5rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            border-radius: 20px;
+            display: inline-block;
         }
         
         nav {
@@ -116,23 +113,6 @@
             padding: 0.5rem 1rem;
             border-radius: 20px;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.5s ease;
-        }
-        
-        nav a:hover::before {
-            left: 100%;
         }
         
         nav a:hover, nav a:focus {
@@ -142,12 +122,11 @@
         
         .hero {
             height: 60vh;
-            background: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            background: url('donat-hero.jpg') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            overflow: hidden;
         }
         
         .hero::after {
@@ -165,20 +144,17 @@
             color: white;
             z-index: 1;
             padding: 2rem;
-            position: relative;
         }
         
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             max-width: 700px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .btn {
@@ -193,34 +169,11 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: translateX(-100%);
-            transition: all 0.5s ease;
-        }
-        
-        .btn:hover::after {
-            transform: translateX(100%);
         }
         
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-        
-        .btn:active {
-            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         .btn-primary {
@@ -239,27 +192,6 @@
             margin-bottom: 3rem;
             font-size: 2rem;
             color: var(--primary);
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-        }
-        
-        .section-title:hover::after {
-            transform: scaleX(1);
         }
         
         .flavors {
@@ -275,27 +207,10 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             text-align: center;
-            position: relative;
-        }
-        
-        .flavor-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: translateX(-100%);
-            transition: all 0.7s ease;
-        }
-        
-        .flavor-card:hover::before {
-            transform: translateX(100%);
         }
         
         .flavor-card:hover {
-            transform: translateY(-10px) rotate(2deg);
+            transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
@@ -303,11 +218,6 @@
             height: 200px;
             background-size: cover;
             background-position: center;
-            transition: all 0.5s ease;
-        }
-        
-        .flavor-card:hover .flavor-img {
-            transform: scale(1.05);
         }
         
         .flavor-info {
@@ -317,12 +227,6 @@
         .flavor-info h3 {
             margin-bottom: 0.5rem;
             color: var(--primary);
-            transition: all 0.3s ease;
-        }
-        
-        .flavor-card:hover .flavor-info h3 {
-            color: var(--secondary);
-            transform: scale(1.05);
         }
         
         .price {
@@ -330,57 +234,11 @@
             color: var(--secondary);
             font-size: 1.2rem;
             margin: 1rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .flavor-card:hover .price {
-            transform: scale(1.1);
         }
         
         .about {
             background-color: var(--secondary);
             color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .about::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 100px;
-            height: 100px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            animation: bubble 15s linear infinite;
-        }
-        
-        .about::after {
-            content: '';
-            position: absolute;
-            bottom: -80px;
-            right: -30px;
-            width: 150px;
-            height: 150px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            animation: bubble 20s linear infinite reverse;
-            animation-delay: 2s;
-        }
-        
-        @keyframes bubble {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0.1;
-            }
-            50% {
-                opacity: 0.3;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
-            }
         }
         
         .about-content {
@@ -388,8 +246,6 @@
             align-items: center;
             gap: 3rem;
             flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
         }
         
         .about-text {
@@ -401,15 +257,8 @@
             flex: 1;
             min-width: 300px;
             height: 400px;
-            background: url('https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            background: url('toko-donat.jpg') center/cover;
             border-radius: 15px;
-            transition: all 0.5s ease;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        .about-img:hover {
-            transform: scale(1.03) rotate(1deg);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
         
         .contact-info {
@@ -425,42 +274,12 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .info-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transition: all 0.3s ease;
-        }
-        
-        .info-card:hover::before {
-            transform: scaleX(1);
         }
         
         .info-card i {
             font-size: 2rem;
             color: var(--primary);
             margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .info-card:hover i {
-            transform: scale(1.2) rotate(15deg);
-            color: var(--secondary);
         }
         
         .info-card h3 {
@@ -476,22 +295,6 @@
             color: var(--secondary);
             text-decoration: none;
             transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .info-card a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: all 0.3s ease;
-        }
-        
-        .info-card a:hover::after {
-            width: 100%;
         }
         
         .info-card a:hover {
@@ -505,16 +308,10 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        form:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
         
         .form-group {
             margin-bottom: 1.5rem;
-            position: relative;
         }
         
         label {
@@ -524,24 +321,16 @@
             color: var(--dark);
         }
         
-        input, textarea, select {
+        input, textarea {
             width: 100%;
             padding: 0.8rem;
             border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
         }
         
         textarea {
             min-height: 150px;
-            resize: vertical;
         }
         
         footer {
@@ -549,7 +338,6 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            position: relative;
         }
         
         .social-links {
@@ -563,44 +351,10 @@
             color: white;
             font-size: 1.5rem;
             transition: all 0.3s ease;
-            display: inline-block;
         }
         
         .social-links a:hover {
             color: var(--accent);
-            transform: translateY(-5px) rotate(10deg);
-        }
-        
-        /* Animasi donat jatuh */
-        .falling-donut {
-            position: fixed;
-            top: -100px;
-            z-index: 9999;
-            pointer-events: none;
-            animation: falling linear forwards;
-        }
-        
-        @keyframes falling {
-            to {
-                transform: translateY(calc(100vh + 100px)) rotate(360deg);
-            }
-        }
-        
-        /* Cursor donat */
-        .donut-cursor {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            pointer-events: none;
-            z-index: 9999;
-            background-image: url('https://cdn-icons-png.flaticon.com/512/3081/3081840.png');
-            background-size: contain;
-            transform: translate(-50%, -50%);
-            transition: transform 0.1s ease;
-        }
-        
-        .cursor-active {
-            transform: translate(-50%, -50%) scale(1.5);
         }
         
         @media (max-width: 768px) {
@@ -620,10 +374,6 @@
             
             .section-title {
                 font-size: 1.5rem;
-            }
-            
-            .flavors {
-                grid-template-columns: 1fr;
             }
         }
         
@@ -669,7 +419,6 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
-            animation: fadeIn 0.3s ease-out;
         }
         
         .modal-content {
@@ -680,16 +429,6 @@
             width: 90%;
             text-align: center;
             position: relative;
-            transform: scale(0.9);
-            opacity: 0;
-            animation: modalOpen 0.3s ease-out forwards;
-        }
-        
-        @keyframes modalOpen {
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
         }
         
         .close-modal {
@@ -699,12 +438,6 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--dark);
-            transition: all 0.3s ease;
-        }
-        
-        .close-modal:hover {
-            color: var(--primary);
-            transform: rotate(90deg);
         }
         
         /* Floating donut button */
@@ -725,81 +458,34 @@
             cursor: pointer;
             z-index: 99;
             transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
         }
         
         .floating-btn:hover {
-            transform: scale(1.1) rotate(15deg);
+            transform: scale(1.1);
             background-color: var(--accent);
             color: var(--dark);
-            animation: none;
-        }
-        
-        /* Confetti effect */
-        .confetti {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            background-color: var(--primary);
-            opacity: 0;
-            z-index: 9998;
-            animation: confettiFall 5s linear forwards;
-        }
-        
-        @keyframes confettiFall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
-        /* Donut counter */
-        .donut-counter {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: var(--dark);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            z-index: 99;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            display: none;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="donut-cursor"></div>
-    <div class="donut-counter">Donat Diklik: <span id="clickCount">0</span></div>
-    
     <header>
-        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" class="donut-bg" onclick="createFallingDonut(this)">
-        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" class="donut-bg" onclick="createFallingDonut(this)">
-        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" class="donut-bg" onclick="createFallingDonut(this)">
-        <h1 onclick="shakeTitle(this)">Donat Mamah Naura</h1>
+        <img src="donut-icon.png" class="donut-bg">
+        <img src="donut-icon.png" class="donut-bg">
+        <img src="donut-icon.png" class="donut-bg">
+        <h1>Donat Mamah Naura</h1>
         <p class="tagline">Donat Lezat dengan Cinta dari Ibu</p>
+        <div class="delivery-info">Hanya tersedia di wilayah Cikarang dan sekitarnya</div>
     </header>
     
     <nav>
         <ul>
-            <li><a href="#home" onclick="playNavSound()">Beranda</a></li>
-            <li><a href="#flavors" onclick="playNavSound()">Rasa Donat</a></li>
-            <li><a href="#about" onclick="playNavSound()">Tentang Kami</a></li>
-            <li><a href="#contact" onclick="playNavSound()">Kontak</a></li>
-            <li><a href="#order" onclick="playNavSound()">Pesan Sekarang</a></li>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#flavors">Rasa Donat</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#order">Pesan Sekarang</a></li>
         </ul>
     </nav>
     
@@ -807,120 +493,120 @@
         <div class="hero-content animate">
             <h2>Donat Spesial dengan Beragam Rasa</h2>
             <p>Nikmati kelezatan donat buatan tangan dengan bahan-bahan pilihan dan penuh cinta. Setiap gigitan membawa kebahagiaan!</p>
-            <a href="#flavors" class="btn btn-primary" onmouseover="playHoverSound()">Lihat Menu</a>
+            <a href="#flavors" class="btn btn-primary">Lihat Menu</a>
         </div>
     </section>
     
     <section id="flavors">
-        <h2 class="section-title" onmouseover="playHoverSound()">Rasa Donat Kami</h2>
+        <h2 class="section-title">Rasa Donat Kami</h2>
         <div class="flavors">
-            <div class="flavor-card animate" onmouseover="playHoverSound()">
-                <div class="flavor-img" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+            <div class="flavor-card animate">
+                <div class="flavor-img" style="background-image: url('donat-matcha.jpg');"></div>
                 <div class="flavor-info">
                     <h3>Matcha</h3>
                     <p>Donat lembut dengan rasa matcha asli dari Jepang yang nikmat.</p>
                     <div class="price">Rp2.000/pcs</div>
-                    <button class="btn" onclick="orderDonut('Matcha'); createConfetti(this)">Pesan Sekarang</button>
+                    <button class="btn" onclick="orderDonut('Matcha')">Pesan Sekarang</button>
                 </div>
             </div>
             
-            <div class="flavor-card animate delay-1" onmouseover="playHoverSound()">
-                <div class="flavor-img" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+            <div class="flavor-card animate delay-1">
+                <div class="flavor-img" style="background-image: url('donat-strawberry.jpg');"></div>
                 <div class="flavor-info">
                     <h3>Strawberry</h3>
                     <p>Donat dengan topping strawberry segar dan saus strawberry homemade.</p>
                     <div class="price">Rp2.000/pcs</div>
-                    <button class="btn" onclick="orderDonut('Strawberry'); createConfetti(this)">Pesan Sekarang</button>
+                    <button class="btn" onclick="orderDonut('Strawberry')">Pesan Sekarang</button>
                 </div>
             </div>
             
-            <div class="flavor-card animate delay-2" onmouseover="playHoverSound()">
-                <div class="flavor-img" style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+            <div class="flavor-card animate delay-2">
+                <div class="flavor-img" style="background-image: url('donat-coklat.jpg');"></div>
                 <div class="flavor-info">
                     <h3>Coklat</h3>
                     <p>Donat klasik dengan lapisan coklat premium yang lumer di mulut.</p>
                     <div class="price">Rp2.000/pcs</div>
-                    <button class="btn" onclick="orderDonut('Coklat'); createConfetti(this)">Pesan Sekarang</button>
+                    <button class="btn" onclick="orderDonut('Coklat')">Pesan Sekarang</button>
                 </div>
             </div>
             
-            <div class="flavor-card animate delay-1" onmouseover="playHoverSound()">
-                <div class="flavor-img" style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+            <div class="flavor-card animate delay-1">
+                <div class="flavor-img" style="background-image: url('donat-bluberi.jpg');"></div>
                 <div class="flavor-info">
                     <h3>Bluberi</h3>
                     <p>Donat dengan topping bluberi segar dan saus bluberi yang segar.</p>
                     <div class="price">Rp2.000/pcs</div>
-                    <button class="btn" onclick="orderDonut('Bluberi'); createConfetti(this)">Pesan Sekarang</button>
+                    <button class="btn" onclick="orderDonut('Bluberi')">Pesan Sekarang</button>
                 </div>
             </div>
             
-            <div class="flavor-card animate delay-2" onmouseover="playHoverSound()">
-                <div class="flavor-img" style="background-image: url('https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');"></div>
+            <div class="flavor-card animate delay-2">
+                <div class="flavor-img" style="background-image: url('donat-keju.jpg');"></div>
                 <div class="flavor-info">
                     <h3>Keju</h3>
                     <p>Donat gurih dengan taburan keju parut yang melimpah.</p>
                     <div class="price">Rp2.000/pcs</div>
-                    <button class="btn" onclick="orderDonut('Keju'); createConfetti(this)">Pesan Sekarang</button>
+                    <button class="btn" onclick="orderDonut('Keju')">Pesan Sekarang</button>
                 </div>
             </div>
         </div>
     </section>
     
     <section id="about" class="about">
-        <h2 class="section-title" onmouseover="playHoverSound()">Tentang Donat Mamah Naura</h2>
+        <h2 class="section-title">Tentang Donat Mamah Naura</h2>
         <div class="about-content">
             <div class="about-text animate">
                 <p>Donat Mamah Naura dimulai dari kecintaan seorang ibu (Mamah Naura) terhadap donat dan keinginannya untuk berbagi kebahagiaan melalui makanan lezat. Dengan resep turun temurun dan bahan-bahan pilihan, setiap donat dibuat dengan penuh cinta dan perhatian.</p>
                 <p>Kami berkomitmen untuk memberikan produk terbaik dengan harga yang terjangkau. Donat kami bebas pengawet dan menggunakan bahan alami untuk rasa yang autentik.</p>
                 <p>Alamat toko kami: <strong>Jl.Citarik No 21, Desa Jati Baru, Kecamatan Cikarang Timur, Kabupaten Bekasi, Jawa Barat</strong></p>
-                <a href="#contact" class="btn" onmouseover="playHoverSound()">Hubungi Kami</a>
+                <a href="#contact" class="btn">Hubungi Kami</a>
             </div>
-            <div class="about-img animate delay-1" onclick="createBubbles(this)"></div>
+            <div class="about-img animate delay-1"></div>
         </div>
     </section>
     
     <section id="contact">
-        <h2 class="section-title" onmouseover="playHoverSound()">Hubungi Kami</h2>
+        <h2 class="section-title">Hubungi Kami</h2>
         <div class="contact-info">
-            <div class="info-card animate" onclick="callUs()" onmouseover="playHoverSound()">
+            <div class="info-card animate">
                 <i class="fas fa-phone-alt"></i>
                 <h3>Telepon</h3>
                 <p><a href="tel:+6288975501560">+62 889-7550-1560</a></p>
-                <button class="btn">Telepon Sekarang</button>
+                <button class="btn" onclick="callUs()">Telepon Sekarang</button>
             </div>
             
-            <div class="info-card animate delay-1" onclick="emailUs()" onmouseover="playHoverSound()">
+            <div class="info-card animate delay-1">
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
                 <p><a href="mailto:evanrizkialfareza@gmail.com">evanrizkialfareza@gmail.com</a></p>
-                <button class="btn">Kirim Email</button>
+                <button class="btn" onclick="emailUs()">Kirim Email</button>
             </div>
             
-            <div class="info-card animate delay-2" onclick="openMaps()" onmouseover="playHoverSound()">
+            <div class="info-card animate delay-2">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Alamat</h3>
                 <p>Jl.Citarik No 21, Desa Jati Baru, Kecamatan Cikarang Timur, Kabupaten Bekasi, Jawa Barat</p>
-                <button class="btn">Lihat di Peta</button>
+                <button class="btn" onclick="openMaps()">Lihat di Peta</button>
             </div>
         </div>
     </section>
     
     <section id="order">
-        <h2 class="section-title" onmouseover="playHoverSound()">Pesan Donat Mamah Naura</h2>
-        <form id="orderForm" class="animate" onsubmit="submitOrder(event)">
+        <h2 class="section-title">Pesan Donat Mamah Naura</h2>
+        <form id="orderForm" class="animate">
             <div class="form-group">
                 <label for="name">Nama Lengkap</label>
-                <input type="text" id="name" required onfocus="playFocusSound()">
+                <input type="text" id="name" required>
             </div>
             
             <div class="form-group">
                 <label for="phone">Nomor Telepon</label>
-                <input type="tel" id="phone" required onfocus="playFocusSound()">
+                <input type="tel" id="phone" required>
             </div>
             
             <div class="form-group">
                 <label for="flavor">Rasa Donat</label>
-                <select id="flavor" required onfocus="playFocusSound()">
+                <select id="flavor" class="form-control" required>
                     <option value="">Pilih Rasa</option>
                     <option value="Matcha">Matcha</option>
                     <option value="Strawberry">Strawberry</option>
@@ -932,20 +618,20 @@
             
             <div class="form-group">
                 <label for="quantity">Jumlah (pcs)</label>
-                <input type="number" id="quantity" min="1" value="1" required onfocus="playFocusSound()">
+                <input type="number" id="quantity" min="1" value="1" required>
             </div>
             
             <div class="form-group">
                 <label for="address">Alamat Pengiriman (jika diantar)</label>
-                <textarea id="address" onfocus="playFocusSound()"></textarea>
+                <textarea id="address"></textarea>
             </div>
             
             <div class="form-group">
                 <label for="notes">Catatan Tambahan</label>
-                <textarea id="notes" onfocus="playFocusSound()"></textarea>
+                <textarea id="notes"></textarea>
             </div>
             
-            <button type="submit" class="btn btn-primary" onmouseover="playHoverSound()">Pesan Sekarang</button>
+            <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
             <div class="donut-spinner" id="spinner"></div>
         </form>
     </section>
@@ -953,14 +639,15 @@
     <footer>
         <p>&copy; 2023 Donat Mamah Naura. Semua Hak Dilindungi.</p>
         <div class="social-links">
-            <a href="#" onmouseover="playHoverSound()"><i class="fab fa-instagram"></i></a>
-            <a href="#" onmouseover="playHoverSound()"><i class="fab fa-facebook"></i></a>
-            <a href="#" onmouseover="playHoverSound()"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p>Jl.Citarik No 21, Desa Jati Baru, Kecamatan Cikarang Timur, Kabupaten Bekasi, Jawa Barat</p>
+        <p class="delivery-info">Hanya tersedia di wilayah Cikarang dan sekitarnya</p>
     </footer>
     
-    <div class="floating-btn" onclick="openOrderModal(); createConfetti(this)" onmouseover="playHoverSound()">
+    <div class="floating-btn" onclick="openOrderModal()">
         <i class="fas fa-donate"></i>
     </div>
     
@@ -973,6 +660,7 @@
             <p><strong>Email:</strong> <a href="mailto:evanrizkialfareza@gmail.com">evanrizkialfareza@gmail.com</a></p>
             <p>Atau kunjungi toko kami di:</p>
             <p>Jl.Citarik No 21, Desa Jati Baru, Kecamatan Cikarang Timur, Kabupaten Bekasi, Jawa Barat</p>
+            <p><strong>Hanya tersedia di wilayah Cikarang dan sekitarnya</strong></p>
             <button class="btn btn-primary" onclick="closeModal()">Tutup</button>
         </div>
     </div>
@@ -982,67 +670,11 @@
             <span class="close-modal" onclick="closeModal()">&times;</span>
             <h2>Terima Kasih!</h2>
             <p>Pesanan Anda telah kami terima. Kami akan segera menghubungi Anda untuk konfirmasi.</p>
-            <button class="btn btn-primary" onclick="closeModal(); createConfetti(this)">Tutup</button>
+            <button class="btn btn-primary" onclick="closeModal()">Tutup</button>
         </div>
     </div>
     
-    <audio id="hoverSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3" preload="auto"></audio>
-    <audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3" preload="auto"></audio>
-    <audio id="focusSound" src="https://assets.mixkit.co/sfx/preview/mixkit-quick-jump-arcade-game-239.mp3" preload="auto"></audio>
-    <audio id="navSound" src="https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3" preload="auto"></audio>
-    
     <script>
-        // Custom donut cursor
-        const cursor = document.querySelector('.donut-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-        
-        document.addEventListener('mousedown', () => {
-            cursor.classList.add('cursor-active');
-        });
-        
-        document.addEventListener('mouseup', () => {
-            cursor.classList.remove('cursor-active');
-        });
-        
-        // Donut counter
-        let donutClickCount = 0;
-        const counter = document.querySelector('.donut-counter');
-        
-        function showCounter() {
-            counter.style.display = 'block';
-            setTimeout(() => {
-                counter.style.display = 'none';
-            }, 3000);
-        }
-        
-        // Sound effects
-        function playHoverSound() {
-            const sound = document.getElementById('hoverSound');
-            sound.currentTime = 0;
-            sound.play();
-        }
-        
-        function playClickSound() {
-            const sound = document.getElementById('clickSound');
-            sound.currentTime = 0;
-            sound.play();
-        }
-        
-        function playFocusSound() {
-            const sound = document.getElementById('focusSound');
-            sound.currentTime = 0;
-            sound.play();
-        }
-        
-        function playNavSound() {
-            const sound = document.getElementById('navSound');
-            sound.currentTime = 0;
-            sound.play();
-        }
-        
         // Animasi saat scroll
         document.addEventListener('DOMContentLoaded', function() {
             const animateElements = document.querySelectorAll('.animate');
@@ -1062,26 +694,16 @@
                 el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
                 observer.observe(el);
             });
-            
-            // Show counter on first donut click
-            document.querySelectorAll('.donut-bg, .flavor-card, .btn').forEach(el => {
-                el.addEventListener('click', () => {
-                    donutClickCount++;
-                    document.getElementById('clickCount').textContent = donutClickCount;
-                    showCounter();
-                });
-            });
         });
         
         // Fungsi untuk tombol pesan
         function orderDonut(flavor) {
             document.getElementById('flavor').value = flavor;
             document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
-            playClickSound();
         }
         
         // Fungsi untuk form pemesanan
-        function submitOrder(e) {
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const spinner = document.getElementById('spinner');
@@ -1092,36 +714,29 @@
                 spinner.style.display = 'none';
                 document.getElementById('thankYouModal').style.display = 'flex';
                 document.getElementById('orderForm').reset();
-                createConfetti();
-                playClickSound();
             }, 2000);
-        }
+        });
         
         // Fungsi kontak
         function callUs() {
-            playClickSound();
             window.location.href = "tel:+6288975501560";
         }
         
         function emailUs() {
-            playClickSound();
             window.location.href = "mailto:evanrizkialfareza@gmail.com";
         }
         
         function openMaps() {
-            playClickSound();
             const address = encodeURIComponent("Jl.Citarik No 21, Desa Jati Baru, Kecamatan Cikarang Timur, Kabupaten Bekasi, Jawa Barat");
             window.open(`https://www.google.com/maps/search/?api=1&query=${address}`);
         }
         
         // Fungsi modal
         function openOrderModal() {
-            playClickSound();
             document.getElementById('orderModal').style.display = 'flex';
         }
         
         function closeModal() {
-            playClickSound();
             document.querySelectorAll('.modal').forEach(modal => {
                 modal.style.display = 'none';
             });
@@ -1133,81 +748,6 @@
                 closeModal();
             }
         });
-        
-        // Animasi tambahan
-        function shakeTitle(element) {
-            element.style.animation = 'shake 0.5s';
-            setTimeout(() => {
-                element.style.animation = '';
-            }, 500);
-            playClickSound();
-        }
-        
-        function createFallingDonut(element) {
-            const donut = document.createElement('img');
-            donut.src = element.src;
-            donut.className = 'falling-donut';
-            donut.style.left = element.getBoundingClientRect().left + 'px';
-            donut.style.width = '100px';
-            donut.style.opacity = '0.7';
-            
-            // Random rotation direction
-            const direction = Math.random() > 0.5 ? 1 : -1;
-            donut.style.animation = `falling ${2 + Math.random() * 3}s linear forwards`;
-            
-            document.body.appendChild(donut);
-            
-            // Remove after animation
-            setTimeout(() => {
-                donut.remove();
-            }, 5000);
-            
-            playClickSound();
-        }
-        
-        function createConfetti(source) {
-            const colors = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#292F36', '#F7FFF7'];
-            const rect = source.getBoundingClientRect();
-            const x = rect.left + rect.width / 2;
-            const y = rect.top + rect.height / 2;
-            
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.left = x + 'px';
-                confetti.style.top = y + 'px';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.width = `${5 + Math.random() * 10}px`;
-                confetti.style.height = `${5 + Math.random() * 10}px`;
-                confetti.style.animationDuration = `${1 + Math.random() * 4}s`;
-                confetti.style.animationDelay = `${Math.random() * 0.5}s`;
-                
-                document.body.appendChild(confetti);
-                
-                setTimeout(() => {
-                    confetti.remove();
-                }, 5000);
-            }
-        }
-        
-        function createBubbles(element) {
-            for (let i = 0; i < 10; i++) {
-                const bubble = document.createElement('div');
-                bubble.className = 'bubble';
-                bubble.style.left = `${Math.random() * 100}%`;
-                bubble.style.top = `${Math.random() * 100}%`;
-                bubble.style.width = `${10 + Math.random() * 40}px`;
-                bubble.style.height = bubble.style.width;
-                bubble.style.animationDuration = `${5 + Math.random() * 10}s`;
-                
-                element.appendChild(bubble);
-                
-                setTimeout(() => {
-                    bubble.remove();
-                }, 15000);
-            }
-            playClickSound();
-        }
     </script>
 </body>
-</html
+</html>
